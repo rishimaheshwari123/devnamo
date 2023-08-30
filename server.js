@@ -1,14 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connetDB = require("./config/db")
-// const cors = require("cors");
+const cors = require("cors");
 
 dotenv.config();
 
 connetDB();
 
 const app = express();
-// app.use(cors);
+app.use(cors());
 app.use(express.json());
 
 // route 
